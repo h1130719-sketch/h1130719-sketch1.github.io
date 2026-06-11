@@ -19,7 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-/* 首頁視覺區塊 */
+/* 首頁頂部視覺區塊 */
 .hero {
     height: 100vh;
     display: flex;
@@ -62,17 +62,25 @@ body {
     60% { transform: translateY(-10px) translateX(-50%); }
 }
 
-/* 內容區塊設定 */
+/* 內容區塊基礎設定 */
 section {
-    min-height: 80vh;
+    min-height: 100vh;
     padding: 100px 10%;
     display: flex;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* 未來感毛玻璃文字框樣式 */
 .section-content {
     max-width: 800px;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-cyan);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
 }
 
 .section-content h2 {
@@ -88,7 +96,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* 了解更多按鈕 */
+/* 了解更多按鈕樣式 */
 .learn-more-btn {
     background: transparent;
     color: var(--accent-purple);
@@ -107,7 +115,7 @@ section {
     box-shadow: 0 0 15px rgba(184, 41, 255, 0.6);
 }
 
-/* 捲動動畫初始狀態 */
+/* 捲動動態效果初始與觸發狀態 */
 .fade-section {
     opacity: 0;
     transform: translateY(50px);
@@ -117,4 +125,21 @@ section {
 .fade-section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* 各區塊專屬全版背景圖設定 (含半透明暗色遮罩與視差滾動效果) */
+#science {
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
+}
+
+#blue-ocean {
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
+}
+
+#mec {
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
+}
+
+#squash {
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=1600&auto=format&fit=crop') center/cover fixed no-repeat;
 }
